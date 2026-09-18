@@ -38,3 +38,24 @@ if st.button("Predict Cluster"):
     cluster = model.predict(input_data)[0]
 
     st.success(f"Customer belongs to Cluster {cluster}")
+
+    # Cluster interpretation
+    if cluster == 0:
+        st.info(
+            "Cluster 0: Middle-income, moderate-spending customers "
+            "with moderately frequent visits."
+        )
+
+    elif cluster == 1:
+        st.info(
+            "Cluster 1: High-income, high-spending customers "
+            "with frequent visits."
+        )
+
+    elif cluster == 2:
+        st.info(
+            "Cluster 2: Lower-income, lower-spending customers "
+            "with fewer visits."
+        )
+
+
